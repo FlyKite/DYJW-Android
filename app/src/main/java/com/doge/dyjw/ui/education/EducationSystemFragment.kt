@@ -1,4 +1,4 @@
-package com.doge.dyjw.ui.dashboard
+package com.doge.dyjw.ui.education
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.doge.dyjw.R
 
-class DashboardFragment : Fragment() {
+class EducationSystemFragment : Fragment() {
 
-    private lateinit var dashboardViewModel: DashboardViewModel
+    private lateinit var educationSystemViewModel: EducationSystemViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        dashboardViewModel =
-                ViewModelProviders.of(this).get(DashboardViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
+        educationSystemViewModel =
+                ViewModelProviders.of(this).get(EducationSystemViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_education, container, false)
         val textView: TextView = root.findViewById(R.id.text_dashboard)
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
+        educationSystemViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

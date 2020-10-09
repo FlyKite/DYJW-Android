@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_course">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.doge.dyjw.ui.home.HomeFragment"
+        android:id="@+id/navigation_course"
+        android:name="com.doge.dyjw.ui.course.MyCourseFragment"
         android:label="@string/tab_home_course"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_course" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.doge.dyjw.ui.dashboard.DashboardFragment"
+        android:id="@+id/navigation_education"
+        android:name="com.doge.dyjw.ui.education.EducationSystemFragment"
         android:label="@string/tab_home_education"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_education" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.doge.dyjw.ui.notifications.NotificationsFragment"
+        android:id="@+id/navigation_news"
+        android:name="com.doge.dyjw.ui.news.NewsFragment"
         android:label="@string/tab_home_news"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_news" />
 </navigation>

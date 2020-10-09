@@ -1,4 +1,4 @@
-package com.doge.dyjw.ui.notifications
+package com.doge.dyjw.ui.course
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.doge.dyjw.R
 
-class NotificationsFragment : Fragment() {
+class MyCourseFragment : Fragment() {
 
-    private lateinit var notificationsViewModel: NotificationsViewModel
+    private lateinit var myCourseViewModel: MyCourseViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        notificationsViewModel =
-                ViewModelProviders.of(this).get(NotificationsViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_notifications, container, false)
-        val textView: TextView = root.findViewById(R.id.text_notifications)
-        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
+        myCourseViewModel =
+                ViewModelProviders.of(this).get(MyCourseViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_course, container, false)
+        val textView: TextView = root.findViewById(R.id.text_home)
+        myCourseViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
